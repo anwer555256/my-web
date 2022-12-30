@@ -1,0 +1,168 @@
+
+*{ margin: 0;
+padding: 0;
+font-family: sans-serif;
+overflow: hidden;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(style/b84f4195a6d33c93d01111287c0c7b7e.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    padding: 0 0;
+    margin-top: 10 px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    
+}
+.nav_button{
+    display: none;
+}
+.ull{
+    padding-block: 20px;
+    background-color: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(1rem);
+    padding-left: 10px;
+    padding-right: 100px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+@media (max-width: 47em ) {
+    .ull{
+        --gap:  30px;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh , 10rem) 2rem ;
+        background-color: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(1rem);
+        transform: translateX(100%);
+        transition: transform 300ms ease-out;
+        font-size: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .ull[data-visible="true"]{
+        transform: translateX(0%);
+    }
+    .nav_button{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background: url("style/4555-removebg.png");
+        cursor: pointer;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 3rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        border: 0;
+    }
+    
+    
+
+}
+.logo{
+margin-top: 20px;
+width: 140px;
+cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #FF6347;
+    text-transform: uppercase;
+    font-size: larger;
+    
+    
+}
+.navbar ul li a::after{
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    z-index: 900;
+    width: 0;
+    background: #FF6347;
+    left: 0;
+    position: absolute;
+    bottom: -0px;
+    transition: 0.5s;
+    
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.navbar ul li:hover:after{
+    width: 100%;
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+  
