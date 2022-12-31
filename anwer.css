@@ -67,7 +67,7 @@ overflow: hidden;
         cursor: pointer;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 3rem;
+        width: 2.5rem;
         aspect-ratio: 1;
         top: 2rem;
         right: 2rem;
@@ -78,8 +78,8 @@ overflow: hidden;
 
 }
 .logo{
-margin-top: 20px;
-width: 140px;
+margin-top: 10px;
+width: 120px;
 cursor: pointer;
 }
 .navbar ul li{
